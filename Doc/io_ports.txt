@@ -1,0 +1,38 @@
+Liste des ports i/o du processeurs utilises:
+
+Ecran
+command port : 0x03D4
+data port : 0x03D5
+
+PIC:
+pic1 - command port : 0x20
+pic1 - data port: 0x21
+pic2 - command port: 0xA0
+pic2 - data port: 0xA1
+
+PIT (clock):
+command port : 0x43
+data port : 0x40
+
+Clavier:
+input buffer(in) : 0x60
+command port(out) : 0x60
+status register(in) : 0x64
+command port(out) : 0x64
+
+ATA:
+PRIMARY BUS 0x1F0 -> 0x1F7
+SECONDARY BUS 0x170 -> 0x177
+pour le premier bus:
+0x1F0 : Data port -- read and write PIO <b>data</b> bytes on this port
+0x1F1 : Features / Error info -- mostly used with ATAPI
+0x1F2 : Sector Count -- number of sectors to read/write (0 = special value)
+0x1F3 : Partial Disk Sector address (CHS / LBA28 / LBA48 specific)
+0x1F4 : Partial Disk Sector address
+0x1F5 : Partial Disk Sector address
+0x1F6 : Drive Select bit, Flag bits, Extra address bits
+0x1F7 : Command port / Regular Status port -- write commands / read status
+
+0x3F6 (read) : Alternate status register
+0x3F6 (write) : Device control register
+

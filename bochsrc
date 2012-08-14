@@ -1,0 +1,7 @@
+megs:32
+
+boot:a
+floppya: 1_44="bootfloppy.img", status=inserted
+
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="Imgs/hdd-10M.img", mode=flat, cylinders=20, heads=16, spt=63

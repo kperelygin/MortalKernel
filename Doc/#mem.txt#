@@ -1,0 +1,10 @@
+Voici l'etat de la memoire au boot:
+Tout est exprime en hexa
+
+ |-> 7C00: boot (200)
+ |-> 1000: stage2 (200)
+ |-> 2000 -> 7000 : kernel
+ |-> 10k -> 9Fk : stack
+ |-> A0k -> C0k : video
+ |-> 100k : PAGE DIRECTORY (from pmem_alloc())
+ |-> datas
